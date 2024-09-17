@@ -1,0 +1,8 @@
+{
+  "Spatial_Distancing": {
+    "runs": 1,
+    "number_of_threads": 1,
+    "seed": 42,
+    "config_path": "../../configurations/testSpatial_distancing"
+  }
+}

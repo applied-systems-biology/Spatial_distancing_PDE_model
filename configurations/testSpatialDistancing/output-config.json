@@ -1,0 +1,7 @@
+{
+  "Spatial_Distancing": {
+    "output_csv": false,
+    "output_graphs": false,
+    "output_ovito": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Spatial_Distancing": {
+    "active_measurements": [
+      "inside_conc%100",
+      "molecules_test%100",
+      "spatial_dist_center%100",
+      "final_conc",
+      "membrane"
+    ],
+    "cell_state_count": [
+    ]
+  }
+}

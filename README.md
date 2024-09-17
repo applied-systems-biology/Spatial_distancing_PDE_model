@@ -34,16 +34,16 @@ The following software components are required to build and use the ABM framewor
 ## Getting started
 ### Build process
 
-To build the framework, clone the repository to a local folder (here: coreABM/) and use the following commands:
+To build the framework, clone the repository to a local folder (here: Spatial_distancing_PDE_model/) and use the following commands:
 
-`~/SpatialDistancing$ mkdir build; cd build`
+`~/Spatial_distancing_PDE_model$ mkdir build; cd build`
 
 Release or Debug mode:
 
-`~/SpatialDistancing/build$ cmake -DCMAKE_BUILD_TYPE=Release .. `
-or `~/SpatialDistancing/build$ cmake -DCMAKE_BUILD_TYPE=Debug .. `
+`~/Spatial_distancing_PDE_model/build$ cmake -DCMAKE_BUILD_TYPE=Release .. `
+or `~/Spatial_distancing_PDE_model/build$ cmake -DCMAKE_BUILD_TYPE=Debug .. `
 
-`~/SpatialDistancing/build$ make `
+`~/Spatial_distancing_PDE_model/build$ make `
 
 The compiled files can be found in the build/ folder.
 
@@ -51,9 +51,9 @@ The compiled files can be found in the build/ folder.
 
 To test if everything was compiled accordingly, run test configuration:
 
-`~/SpatialDistancing/build$ cd test/`
+`~/Spatial_distancing_PDE_model/build$ cd test/`
 
-`~/SpatialDistancing/build/test$ ./test_configurations`
+`~/Spatial_distancing_PDE_model/build/test$ ./test_configurations`
 
 (Test must be executed from the folder)
 
@@ -63,7 +63,7 @@ If the tests pass, the framework and its corresponding libraries were successful
 
 To use the model, run the executable program `build/src/SpatialDistancing` with a `.json` configuration file as program argument
 
-`~/SpatialDistancing build$/src/SpatialDistancing <config-file>.json`
+`~/Spatial_distancing_PDE_model build$/src/SpatialDistancing <config-file>.json`
 
 Additional input files
 - `analyser-config.json`
