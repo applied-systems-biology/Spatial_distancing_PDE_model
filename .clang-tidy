@@ -1,0 +1,171 @@
+Checks: '*,
+-abseil-*,-llvmlibc*,-boost-*,-darwin-*,-fuchsia-*,-google-objc-*,-openmp-use-default-none,-google-uild-using-namespace,-hicpp-no-array-decay*,-google-upgrade-googletest-case,-mpi-*,-objc-*,-cppcoreguidelines-pro-bounds*,-cert-err58-cpp,-clang-analyzer-osx.*,-clang-analyzer-optin.osx.*,-modernize-use-trailing-return-type,-modernize-use-transparent-functors,-readability-uppercase-literal-suffix,-cppcoreguidelines-pro-bounds-constant-array-index,-cert-dcl21-cpp,-misc-non-private-member-variables-in-classes,-google-runtime-references,-hicpp-uppercase-literal-suffix'
+CheckOptions:
+  - key:   bugprone-assert-side-effect.CheckFunctionCalls
+    value: 'true'
+  - key:   bugprone-dangling-handle.HandleClasses
+    value: 'std::string_view;std:basic_string_view'
+  - key:   bugprone-sizeof-expression.WarnOnSizeOfIntegerExpression
+    value: '1'
+  - key:   bugprone-string-constructor.LargeLengthThreshold
+    value: '0x8000'
+  - key:   bugprone-suspicious-enum-usage.StrictMode
+    value: '1'
+  - key:   bugprone-suspicious-missing-comma.SizeThreshold
+    value: '3'
+  - key:   bugprone-unhandled-self-assignment.WarnOnlyIfThisHasSuspiciousField
+    value: '1'
+  - key:   cppcoreguidelines-narrowing-conversions.PedanticMode
+    value: '1'
+  - key:   cppcoreguidelines-no-malloc.Allocations
+    value: '::malloc;::calloc;::new;::new[]'
+  - key:   cppcoreguidelines-no-malloc.Deallocations
+    value: '::free;::delete;::delete[]'
+  - key:   cppcoreguidelines-pro-type-member-init.UseAssignment
+    value: '0'
+  - key:   cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+    value: '1'
+  - key:   google-runtime-int.UnsignedTypePrefix
+    value: 'std::uint'
+  - key:   google-runtime-int.SignedTypePrefix
+    value: 'std::int'
+  - key:   google-runtime-int.TypeSuffix
+    value: '_t'
+  - key:   hicpp-signed-bitwise.IgnorePositiveIntegerLiterals
+    value: 'true'
+  - key:   llvm-namespace-comment.ShortNamespaceLines
+    value: '15'
+  - key:   modernize-use-auto.MinTypeNameLength
+    value: 12
+  - key:   performance-faster-string-find.StringLikeClasses
+    value: 'std::basic_string;std::basic_string_view'
+  - key:   performance-inefficient-string-concatenation.StrictMode
+    value: '1'
+  - key:   readability-function-size.LineThreshold
+    value: '120'
+  - key:   readability-function-size.StatementThreshold
+    value: '100'
+  - key:   readability-function-size.BranchThreshold
+    value: '15'
+  - key:   readability-function-size.ParameterThreshold
+    value: '8'
+  - key:   readability-function-size.NestingThreshold
+    value: '10'
+  - key:   readability-function-size.VariableThreshold
+    value: '20'
+  - key:   readability-identifier-naming.AbstractClassCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.AbstractClassSuffix
+    value: '_interface'
+  - key:   readability-identifier-naming.ClassCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.ClassConstantCase
+    value: 'UPPER_CASE'
+  - key:   readability-identifier-naming.ClassMemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ClassPrivateMemberSuffix
+    value: '_'
+  - key:   readability-identifier-naming.ClassMethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.ConstantCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ConstantMemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ConstantParameterCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ConstantPointerParameterCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ConstexprFunctionCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.ConstexprMethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.ConstexprVariableCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.EnumCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.EnumConstantCase
+    value: 'UPPER_CASE'
+  - key:   readability-identifier-naming.FunctionCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.GlobalConstantCase
+    value: 'UPPER_CASE'
+  - key:   readability-identifier-naming.GlobalConstantPointerCase
+    value: 'aNy_CaSe'
+  - key:   readability-identifier-naming.GlobalFunctionCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.GlobalPointerCase
+    value: 'aNy_CaSe'
+  - key:   readability-identifier-naming.GlobalPointerPrefix
+    value: 'glob'
+  - key:   readability-identifier-naming.GlobalVariableCase
+    value: 'aNy_CaSe'
+  - key:   readability-identifier-naming.GlobalVariablePrefix
+    value: 'glob'
+  - key:   readability-identifier-naming.LocalPointerCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.LocalVariableCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.MemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.MethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.NamespaceCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ParameterCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ParameterPackCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ParameterPackSuffix
+    value: 's'
+  - key:   readability-identifier-naming.PointerParameterCase
+    value: 'm_'
+  - key:   readability-identifier-naming.PrivateMemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.PrivateMemberSuffix
+    value: '_'
+  - key:   readability-identifier-naming.PrivateMethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.ProtectedMemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.ProtectedMemberSuffix
+    value: '_'
+  - key:   readability-identifier-naming.ProtectedMethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.PublicMemberCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.PublicMethodCase
+    value: 'camelCase'
+  - key:   readability-identifier-naming.StaticConstantCase
+    value: 'UPPER_CASE'
+  - key:   readability-identifier-naming.StaticVariableCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.StructCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.TemplateParameterCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.TemplateTemplateParameterCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.TypeAliasCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.TypeTemplateParameterCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.UnionCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.ValueTemplateParameterCase
+    value: 'CamelCase'
+  - key:   readability-identifier-naming.VariableCase
+    value: 'lower_case'
+  - key:   readability-identifier-naming.VirtualMethodCase
+    value: 'camelCase'
+  - key:   readability-inconsistent-declaration-parameter-name.Strict
+    value: '1'
+  - key:   readability-magic-numbers.IgnoredIntegerValues
+    value: {-1,0,1,2,3,4}
+  - key:   readability-magic-numbers.IgnoredFloatingPointValues
+    value: {-1.0, 0.0, 1.0, 0.5, 2.0}
+  - key:   readability-redundant-member-init.IgnoreBaseInCopyConstructors
+    value: '1'
+  - key:   readability-simplify-boolean-expr.ChainedConditionalReturn
+    value: '1'
+  - key:   readability-simplify-boolean-expr.ChainedConditionalAssignment
+    value: '1'

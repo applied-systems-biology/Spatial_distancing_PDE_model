@@ -1,0 +1,238 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						7
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "src/analyser",
+					"jsonFile" : "directory-src.analyser-Debug-93c56e47b3192e0abbb2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/analyser",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/basic",
+					"jsonFile" : "directory-src.basic-Debug-f63db2c7a159fc39015a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/basic",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/io",
+					"jsonFile" : "directory-src.io-Debug-9234336bce768e391f5d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/io",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/simulation",
+					"jsonFile" : "directory-src.simulation-Debug-57c93cf8c50614a5131f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/simulation",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/utils",
+					"jsonFile" : "directory-src.utils-Debug-3e06762d87894fb62125.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/utils",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "test",
+					"jsonFile" : "directory-test-Debug-451c0598f41488bb20b9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "Spatial_Distancing",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Spatial_Distancing::@145eef247bfb46b6828c",
+					"jsonFile" : "target-Spatial_Distancing-Debug-a69c03be4f0ee8a8e7c9.json",
+					"name" : "Spatial_Distancing",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "analyser::@74edab61b05d4e9d5c54",
+					"jsonFile" : "target-analyser-Debug-91f6b62a3870ac89f224.json",
+					"name" : "analyser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "basic::@4c39443c9f02e7b2e06c",
+					"jsonFile" : "target-basic-Debug-117c8c328edfca661aea.json",
+					"name" : "basic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "io::@8c9074cf2e563e673ee9",
+					"jsonFile" : "target-io-Debug-a89f970032a3ca90d5d6.json",
+					"name" : "io",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "simulation::@14db2e6ec23a8dd5a8be",
+					"jsonFile" : "target-simulation-Debug-05e953a1a8644814e929.json",
+					"name" : "simulation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test_configurations::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test_configurations-Debug-0c61691e76249c0293a8.json",
+					"name" : "test_configurations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "test_units::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test_units-Debug-72b0cac3dd9bd2cc6781.json",
+					"name" : "test_units",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "utils::@f1b38b22aeb65474a6c5",
+					"jsonFile" : "target-utils-Debug-a173fad91229ff793c0e.json",
+					"name" : "utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ybachelot/CLionProjects/Spatial_distancing_PDE_model/cmake-build-debug",
+		"source" : "/home/ybachelot/CLionProjects/Spatial_distancing_PDE_model"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

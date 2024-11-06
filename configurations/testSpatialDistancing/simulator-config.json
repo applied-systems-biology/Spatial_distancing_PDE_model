@@ -1,0 +1,153 @@
+{
+  "Spatial_Distancing": {
+    "topic": "test",
+    "timestepping": 0.0001,
+    "max_time": 0.5,
+    "dimensions": 3,
+    "use_interactions": true,
+    "Sites": [
+      {
+        "identifier": "cs1",
+        "Passive Movement": false,
+        "boundary_condition": 2,
+        "initial_distribution": 0,
+        "interaction_radius": 0.0,
+        "stopping_criteria":{
+          "threshold": 0.0001,
+          "molecule": "AMP",
+          "time": 2.5
+        },
+        "NeighbourhoodLocator": {
+          "type": "BalloonListNHLocator",
+          "grid_constant": 45.0
+        },
+        "molecular_layer": true,
+        "type": "CuboidSite",
+        "CuboidSite": {
+          "x_range": [
+            -10.0,
+            10.0
+          ],
+          "y_range": [
+            -10.0,
+            10.0
+          ],
+          "z_range": [
+            -10.0,
+            10.0
+          ],
+          "molecules_grid_size" : [20, 20, 20]
+        },
+        "MoleculeManager": {
+          "boundary_condition": "periodic",
+          "Types": [
+            "AMP",
+            "Defensive",
+            "Complex"
+          ],
+          "Molecules": {
+            "AMP": {
+              "DiffusionCoefficient": 40.0,
+              "InitialConcentration": 1000.0,
+              "Decay": 0.0
+            },
+            "Defensive": {
+              "DiffusionCoefficient": 40.0,
+              "InitialConcentration": 0.0,
+              "Decay": 0.0
+            },
+            "Complex": {
+              "DiffusionCoefficient": 20.0,
+              "InitialConcentration": 0.0
+            }
+          },
+          "MoleculeMoleculeInteractions":{
+            "Complex": {
+              "first": "AMP",
+              "second": "Defensive",
+              "binding": 0.1,
+              "unbinding": 0.5
+            }
+          }
+        },
+        "AgentManager": {
+          "Types": [
+            "Cell"
+          ],
+          "Agents": {
+            "Cell": {
+              "type": "cell",
+              "number": 1,
+              "initial_distribution": 1,
+              "inside_conc": true,
+              "Molecule Interactions": {
+                "AMP": {
+                  "UptakeRate": 0.5,
+                  "InsideConcDecay": 0.0
+                },
+                "Defensive": {
+                  "secretion_variable_over_time": true,
+                  "SecretionRate": 10,
+                  "Secretion_delay": 0.05
+                }
+              },
+              "Movement": {
+                "type": "BiasedPersistentRandomWalk",
+                "speed": {
+                  "mean": 0,
+                  "stddev": 0
+                },
+                "persistence_time": 1
+              },
+              "Morphology": {
+                "color": "blueTransp2",
+                "SphericalMorphology": {
+                  "radius": 3.5,
+                  "stddev": 0
+                }
+              },
+              "Cell States": {
+                "InitialCellState": {},
+                "Death": {}
+              }
+            }
+          }
+        }
+      }
+    ],
+    "Interactions": {
+      "IdenticalCellsInteraction": {
+        "type": "IdenticalCellsInteraction",
+        "Interaction States": {
+          "InitialInteractionState": {
+            "next_states": {
+              "NoInterplay": {
+                "rate": "nointerplay"
+              }
+            }
+          },
+          "NoInterplay": {
+            "type": "Contacting"
+          }
+        }
+      },
+      "AvoidanceInteraction": {
+        "type": "AvoidanceInteraction",
+        "Interaction States": {
+          "InitialInteractionState": {
+            "type": "InteractionType",
+            "next_states": {
+              "Avoidance": {
+                "rate": "nointerplay"
+              }
+            }
+          },
+          "Avoidance": {
+            "type": "Contacting",
+            "must_overhead": 0.05
+          }
+        }
+      }
+    }
+  }
+}
